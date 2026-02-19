@@ -1,2 +1,2 @@
 # rice-awesome
-rice defintive
+rice defintive: Uma fusão de Gnome com Hyprland.
