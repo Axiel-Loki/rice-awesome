@@ -1,0 +1,175 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": "15",
+    "reload_style_on_change": true,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/sep1",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        
+    ],
+
+    "modules-right": [
+        "backlight",
+        "network",
+        "pulseaudio",
+        "battery",
+        "custom/sep2",
+        "clock",
+        "custom/sep3",
+        "group/power-expander"
+    ],
+
+    "hyprland/workspaces": {
+        "format":"{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "default": "1"
+        },
+
+        "icon-size": 15,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+    "custom/sep1": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "hyprland/window": {
+        "format": "{class}",
+        "max-length": 50,
+        "separate-outputs": true,
+        "tooltip": false
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": " {percent}%",
+        "tooltip": false,
+        "scroll-step": 5
+    },
+
+    "network": {
+        "interface": "wlan*",
+        "format-wifi": " {essid}",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "net off",
+        "tooltip": false,
+        "interval": 3,
+        "on-click": "ghostty -e nmtui"
+    },
+
+    "pulseaudio": {
+        "format": " {volume}%",
+        "format-muted": " muted",
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "tooltip": false,
+        "scroll-step": 5
+
+    },
+
+    "battery": {
+        "format-discharging": "󱟟 {capacity}% discharging",
+        "format-charging": " {capacity}% charging",
+        "format-plugged": " {capacity}% plugged",
+        "tooltip": false,
+        "interval": 5,
+        "states": {
+            "warning": 50,
+            "critical": 20
+        }
+
+    },
+
+    "custom/sep2": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "clock": {
+        "timezone": "America/Sao_Paulo",
+        "format": "{:%d %a %H:%M}",
+        "format-alt": "{:%B %Y}",
+        "tooltip": false
+    },
+
+    "custom/sep3": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "group/power-expander": {
+        "orientation": "inherit", 
+        "drawer": {
+            "transition-duration": 500, 
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+
+        "modules": [
+            "custom/power",
+            "custom/reboot",
+            "custom/lock",
+            "custom/suspend",
+            "custom/logout"
+        ]
+    },
+
+    "custom/power": {
+        "format": " ",
+        "tooltip": false,
+        "tooltip-format": "Desligar",
+        "on-click": "systemctl poweroff"
+    },
+
+    "custom/reboot": {
+        "format": "",
+        "tooltip": false,
+        "tooltip-format": "Reiniciar",
+        "on-click": "systemctl reboot"
+    },
+
+    "custom/lock": {
+        "format": "",
+        "tooltip": false,
+        "tooltip-format": "Bloquear tela",
+        "on-click": "hyprlock",
+        "on-click-right": "loginctl lock-session"
+    },
+
+    "custom/suspend": {
+        "format": "",
+        "tooltip": false,
+        "tooltip-format": "Suspender",
+        "on-click": "systemctl suspend"
+    },
+
+    "custom/logout": {
+        "format": "",
+        "tooltip": false,
+        "tooltip-format": "Sair",
+        "on-click": "hyprctl dispatch exit"
+    }
+}

@@ -1,0 +1,42 @@
+# ---------------------------------------------------------
+# Ghostty Configuration (Converted from Kitty)
+# ---------------------------------------------------------
+
+# Tema
+theme = Arcoiris
+
+# Fonte
+font-family = "JetBrains Mono Nerd Font"
+font-size = 12
+font-thicken = true
+
+# Janela e Aparência
+window-padding-x = 4
+window-padding-y = 4
+
+# Comportamento
+confirm-close-surface = false
+mouse-hide-while-typing = true
+desktop-notifications = false
+
+# ---------------------------------------------------------
+# Atalhos de Teclado (Keybindings)
+# ---------------------------------------------------------
+
+# Zoom da fonte (Igual ao Kitty)
+keybind = ctrl+shift+equal=increase_font_size:1
+keybind = ctrl+shift+minus=decrease_font_size:1
+keybind = ctrl+shift+backspace=reset_font_size
+
+# Copiar e Colar (Igual ao Kitty)
+keybind = ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
+# Enviar interrupção (SIGINT) como no seu Kitty
+keybind = ctrl+shift+c=text:\x03
+
+# Navegação de Janelas/Abas
+keybind = ctrl+shift+e=new_split:right
+keybind = ctrl+shift+o=new_split:down
+keybind = ctrl+t=new_tab
+keybind = ctrl+tab=next_tab

@@ -1,0 +1,60 @@
+* {
+    font-family: "JetBrainsMono Nerd Font Propo", sans-serif;
+    font-size: 15px;
+}
+
+/* WAYBAR */
+window#waybar {
+    background-color: #202020;
+    color: #cccccc;
+    font-weight: 400;
+    transition: background-color 0.5s;
+}
+
+#workspaces button {
+    border-radius: 1px;
+    color: #999999;
+    font-weight: 400;
+    padding: 0.3rem 0.5rem;
+}
+
+#workspaces button.active {
+    color: #cccccc;
+}
+
+#workspaces button.urgent {
+    background-color: #333333;
+    color: #000000;
+}
+
+#window,
+#backlight,
+#network,
+#pulseaudio,
+#battery,
+#clock,
+#group-power-expander,
+#custom-power, #custom-reboot, #custom-lock, 
+#custom-suspend, #custom-logout {
+    color: #999999;
+    padding: 0.3rem 0.5rem;
+}
+
+/* STATUS HOVER */
+#window:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#clock:hover,
+#custom-power:hover, #custom-reboot:hover, 
+#custom-lock:hover, #custom-suspend:hover, 
+#custom-logout:hover {
+    color: #cccccc;
+}
+
+#custom-sep1, #custom-sep2, #custom-sep3 {
+    color: #666666;
+    border-radius: 1px; 
+    padding: 0.3rem 0.4rem;
+}
